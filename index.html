@@ -4,10 +4,242 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>gsap</title>
+    <meta
+      name="description"
+      content="Your creative coding workspace. Explore GSAP, scroll animation, SVG, Adobe Animate, and generative art."
+    />
+    <title>Creative Coding Club — Learning Library</title>
+    <link rel="stylesheet" href="/src/style.css" />
   </head>
   <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.js"></script>
+    <div class="shell">
+      <header>
+        <div class="brand">
+          <span class="brand-mark" aria-hidden="true">✳</span> Creative Coding
+          Club
+        </div>
+        <span class="header-note"
+          >A little curiosity. A lot of possibility.</span
+        >
+      </header>
+      <main>
+        <section class="intro" aria-labelledby="page-title">
+          <span class="eyebrow">Your creative playground</span>
+          <h1 id="page-title">Make things move.</h1>
+          <p>
+            Explore the library. Find your next idea. Bring it to life with
+            code.
+          </p>
+        </section>
+        <div class="library">
+          <aside class="sidebar" aria-label="Library categories">
+            <div class="sidebar-label">
+              <span>The library</span><span>10 collections</span>
+            </div>
+            <div
+              role="tablist"
+              aria-label="Course categories"
+              aria-orientation="vertical"
+              id="category-tabs"
+            ></div>
+          </aside>
+          <div class="content" id="category-panels"></div>
+        </div>
+      </main>
+      <footer>
+        <span>Creative Coding Club / Learning library</span
+        ><span>Stay curious. Keep creating.</span>
+      </footer>
+    </div>
+    <script type="module">
+      const categories = [
+        [
+          "ScrollTrigger Express",
+          "Scroll-driven animation",
+          "↓",
+          "Turn a simple scroll into a memorable experience. Explore how scroll position can drive animation, reveal content, and control a sequence.",
+          ["ScrollTrigger", "Pinning", "Scrubbing", "Scroll timing"],
+        ],
+        [
+          "GSAP Summer Camp 2025",
+          "Creative exploration",
+          "☀",
+          "A place for playful animation experiments and fresh ideas. Explore creative coding techniques and build your confidence through hands-on practice.",
+          ["Animation experiments", "Creative challenges", "GSAP techniques"],
+        ],
+        [
+          "GSAP File Vault",
+          "Resources & inspiration",
+          "{ }",
+          "Your category for reusable animation ideas and project resources. Keep useful patterns close as you explore and build your own experiments.",
+          ["Animation patterns", "Project resources", "Reusable ideas"],
+        ],
+        [
+          "Adobe Animate for HTML5",
+          "Canvas & interaction",
+          "< >",
+          "Explore creating animated experiences for the browser with Adobe Animate. Connect visual animation with HTML5 canvas and JavaScript interaction.",
+          ["HTML5 canvas", "JavaScript", "Interactive animation"],
+        ],
+        [
+          "Generative Art with Adobe Animate (AS3)",
+          "Code as a creative medium",
+          "✳",
+          "Explore patterns, randomness, and repetition through ActionScript 3. Discover how simple rules can produce expressive visual compositions.",
+          [
+            "ActionScript 3",
+            "Generative patterns",
+            "Randomness",
+            "Creative systems",
+          ],
+        ],
+        [
+          "GSAP3: Beyond the Basics",
+          "Go a little deeper",
+          "+",
+          "Build on the fundamentals with more expressive animation techniques. Explore sequencing, reusable motion patterns, and finer control over your animations.",
+          ["Advanced timelines", "Animation control", "Reusable motion"],
+        ],
+        [
+          "SVG Animation with GSAP",
+          "Vector graphics in motion",
+          "◇",
+          "Bring scalable vector artwork to life. Explore animating SVG elements and combining shapes, transforms, and timelines into coordinated motion.",
+          ["SVG elements", "Transforms", "Vector animation"],
+        ],
+        [
+          "B-Sides, Bonuses and Oddities",
+          "Follow your curiosity",
+          "≈",
+          "Take a detour into unexpected ideas and playful experiments. This is the corner of the library for unusual techniques and creative discoveries.",
+          ["Experiments", "Bonus ideas", "Unusual techniques"],
+        ],
+        [
+          "GSAP 3 Express",
+          "Start with the essentials",
+          "→",
+          "Get comfortable with the building blocks of GSAP. Explore tweens, easing, and timelines as you turn static elements into animated experiences.",
+          ["Tweens", "Easing", "Timelines", "Core concepts"],
+        ],
+        [
+          "Welcome to Creative Coding Club",
+          "Your starting point",
+          "👋",
+          "Welcome to your creative coding workspace. Explore the categories, follow what interests you, and make room for experimentation as you learn.",
+          ["Getting started", "Explore the library", "Creative practice"],
+        ],
+      ];
+      // Add first-level groups as { title, lessons: [{ title, href }] } entries.
+      const childPages = {
+        "01": [],
+        "02": [],
+        "03": [],
+        "04": [],
+        "05": [],
+        "06": [
+          {
+            title: "Title Effects Generator",
+            lessons: [
+              { title: "Part 1", href: "/lesson-06-p-6-1/" },
+              { title: "Part 2", href: "/lesson-06-p-6-2/" },
+              { title: "Part 3", href: "/lesson-06-p-6-3/" },
+            ],
+          },
+        ],
+        "07": [],
+        "08": [],
+        "09": [],
+        10: [],
+      };
+      const tablist = document.querySelector("#category-tabs");
+      const panels = document.querySelector("#category-panels");
+      categories.forEach(([title], index) => {
+        const number = String(index + 1).padStart(2, "0");
+        const tab = document.createElement("button");
+        tab.type = "button";
+        tab.id = `tab-${index}`;
+        tab.setAttribute("role", "tab");
+        tab.setAttribute("aria-controls", `panel-${index}`);
+        tab.setAttribute("aria-selected", String(index === 0));
+        tab.tabIndex = index === 0 ? 0 : -1;
+        tab.innerHTML = `<span class="tab-number" aria-hidden="true">${number}</span><span>${title}</span>`;
+        tab.addEventListener("click", () => selectTab(index));
+        tablist.append(tab);
+        const panel = document.createElement("section");
+        panel.id = `panel-${index}`;
+        panel.setAttribute("role", "tabpanel");
+        panel.setAttribute("aria-labelledby", tab.id);
+        panel.tabIndex = 0;
+        panel.hidden = index !== 0;
+        const heading = document.createElement("h2");
+        heading.textContent = title;
+        panel.append(heading);
+        childPages[number].forEach(({ title: groupTitle, lessons }) => {
+          const group = document.createElement("details");
+          group.className = "lesson-group";
+          group.name = `category-${number}`;
+          const summary = document.createElement("summary");
+          summary.textContent = groupTitle;
+          group.append(summary);
+          const list = document.createElement("ul");
+          list.className = "lesson-links";
+          list.setAttribute("aria-label", `${groupTitle} lessons`);
+          lessons.forEach(({ title: pageTitle, href }) => {
+            const item = document.createElement("li");
+            const link = document.createElement("a");
+            link.href = href;
+            link.textContent = pageTitle;
+            const arrow = document.createElement("span");
+            arrow.textContent = "↗";
+            arrow.setAttribute("aria-hidden", "true");
+            link.append(arrow);
+            item.append(link);
+            list.append(item);
+          });
+          group.append(list);
+          panel.append(group);
+        });
+        if (!childPages[number].length) {
+          const empty = document.createElement("p");
+          empty.className = "empty-lessons";
+          empty.textContent = "No lessons added yet.";
+          panel.append(empty);
+        }
+        panels.append(panel);
+      });
+      const tabs = [...tablist.children];
+      function selectTab(index) {
+        tabs.forEach((tab, i) => {
+          tab.setAttribute("aria-selected", String(i === index));
+          tab.tabIndex = i === index ? 0 : -1;
+          panels.children[i].hidden = i !== index;
+        });
+      }
+      const mobile = matchMedia("(max-width: 680px)");
+      function setOrientation() {
+        tablist.setAttribute(
+          "aria-orientation",
+          mobile.matches ? "horizontal" : "vertical",
+        );
+      }
+      setOrientation();
+      mobile.addEventListener("change", setOrientation);
+      tablist.addEventListener("keydown", (event) => {
+        const current = tabs.indexOf(document.activeElement);
+        if (current < 0) return;
+        const nextKey = mobile.matches ? "ArrowRight" : "ArrowDown";
+        const previousKey = mobile.matches ? "ArrowLeft" : "ArrowUp";
+        let next;
+        if (event.key === nextKey) next = (current + 1) % tabs.length;
+        else if (event.key === previousKey)
+          next = (current - 1 + tabs.length) % tabs.length;
+        else if (event.key === "Home") next = 0;
+        else if (event.key === "End") next = tabs.length - 1;
+        else return;
+        event.preventDefault();
+        selectTab(next);
+        tabs[next].focus();
+      });
+    </script>
   </body>
 </html>

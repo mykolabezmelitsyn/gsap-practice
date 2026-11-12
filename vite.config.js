@@ -11,7 +11,9 @@ export default defineConfig({
 
   input: {
     home: resolve(root, 'index.html'),
-    lesson1: resolve(root, 'lesson-1/index.html'),
+    lesson06p61: resolve(root, 'lesson-06-p-6-1/index.html'),
+    lesson06p62: resolve(root, 'lesson-06-p-6-2/index.html'),
+    lesson06p63: resolve(root, 'lesson-06-p-6-3/index.html'),
   },
 
   build: {
