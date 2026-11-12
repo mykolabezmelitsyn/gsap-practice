@@ -1,4 +1,4 @@
-import {gsap, SplitText, GSDevTools} from "../src/libs/gsap.js";
+import {gsap, SplitText, GSDevTools, SlowMo} from "../src/libs/gsap.js";
 
 let elements = document.querySelectorAll(".wrapper1 li")
 let effectsTimeline = gsap.timeline({delay: 0.3})
@@ -18,6 +18,7 @@ gsap.registerEffect({
     perspective: 400,
     ease: "power1",
     each: 0.05,
+    // staggerEase: "slow(0.5, 0.2, false)",
     staggerEase: "power1.in",
     from: "start"
   },
@@ -303,7 +304,7 @@ gsap.registerEffect({
     y:0,
     x:0,
     duration:1,
-    ease:"power1",
+    ease:"power1.out",
     scale:1,
     direction:"in"
   },

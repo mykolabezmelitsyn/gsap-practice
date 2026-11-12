@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="Your creative coding workspace. Explore GSAP, scroll animation, SVG, Adobe Animate, and generative art."
+  />
+  <title>Creative Coding Club — Learning Library</title>
+  <link href="https://fonts.googleapis.com/css?family=Kanit:300,400,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/src/style.css" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+<div class="shell">
+  <header>
+    <a href="/" class="brand">
+      <span class="brand-mark" aria-hidden="true">✳</span>
+      Creative Coding Club
+    </a>
+  </header>
+  <main>
+    <div class="wrapper">
+      <p>Creativity Is Intelligence Having Fun</p>
+    </div>
+
+    <div class="nav">
+      <div class="sliderGroup">
+        duration
+        <input id="durationSlider" type="range" min="0.5" max="5" value="0" step="0.05" />
+        <div id="durationDisplay">0.00</div>
+      </div>
+
+      <div class="sliderGroup">amplitude
+        <input id="amplitudeSlider" type="range" min="0.5" max="4" value="0" step="0.5" />
+        <div id="amplitudeDisplay">0.00</div>
+      </div>
+
+      <div class="sliderGroup">frequency
+        <input id="frequencySlider" type="range" min="0" max="1" value="0" step="0.01" />
+        <div id="frequencyDisplay">0.00</div>
+      </div>
+    </div>
+  </main>
+</div>
+<script type="module" src="./scripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+body {
+  background-color: #230716;
+  overflow: hidden;
+  font-family: Kanit, sans-serif;
+}
+
+body,
+html {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#demo {
+  overflow: hidden;
+  aspect-ratio: 1;
+  visibility: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  /*border: 1px solid red;*/
+}
+
+h1 {
+  font-size: 70px;
+  color: #ccc;
+  display: inline-block;
+  font-style: italic;
+  font-weight: 500;
+}
+
+img {
+  /*position: absolute;*/
+  /*top: 100px;*/
+}

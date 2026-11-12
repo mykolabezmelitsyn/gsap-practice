@@ -1,0 +1,36 @@
+body {
+  background-color: #230716;
+  font-family: Kanit, sans-serif;
+}
+
+body,
+html {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#demo {
+  overflow: hidden;
+  aspect-ratio: 1;
+  visibility: hidden;
+  position: relative;
+  display: grid;
+  place-items: center;
+  /*border:1px solid red;*/
+}
+
+.title {
+  display: grid;
+  font-size: 70px;
+  color: #ccc;
+  font-style: italic;
+  font-weight: 500;
+  text-align: center;
+}
+
+.title > * {
+  grid-area: 1 / 1;
+}
+

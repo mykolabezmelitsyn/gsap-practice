@@ -1,0 +1,35 @@
+body {
+  background-color: #131313;
+  overflow: hidden;
+  font-family: 'Creepster', cursive;
+}
+
+#demo {
+  visibility: hidden;
+  text-align: center;
+}
+
+h1 {
+  color: white;
+  letter-spacing: 6px;
+  margin: 0;
+  font-size: 120px;
+  font-weight: 400;
+  flex: 1;
+  align-self: flex-end;
+}
+
+button {
+  border-radius: 10px;
+  background: #fc3;
+  color: #06c;
+  font-size: 14px;
+  padding: 10px;
+  border: none;
+  font-weight: bold;
+
+}
+
+button:focus {
+  outline: none;
+}
