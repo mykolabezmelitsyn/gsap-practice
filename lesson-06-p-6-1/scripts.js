@@ -81,8 +81,6 @@ gsap.registerEffect({
   },
 });
 
-// by creating an effect using registerEffect() we can now write much less code when we build our animation
-
 function splitElements() {
   elements.forEach(function (element, index) {
     let split = new SplitText(element, { type: "chars,words,lines" });
