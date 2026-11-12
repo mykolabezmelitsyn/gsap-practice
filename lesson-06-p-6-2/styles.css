@@ -1,0 +1,17 @@
+ul {
+  display: grid;
+  place-items: center;
+  height: 300px;
+}
+ul > * {
+  grid-area: 1 / 1;
+}
+
+li{
+  list-style-type:none;
+  font-size:1.8em;
+  font-weight:300;
+  margin:0;
+  text-align:center;
+  user-select:none;
+}

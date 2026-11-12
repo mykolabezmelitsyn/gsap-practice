@@ -10,6 +10,7 @@
 }
 body {
   margin: 0;
+  line-height: 1.5;
 }
 button {
   font: inherit;
@@ -31,6 +32,7 @@ header {
   border-bottom: 1px solid #333830;
 }
 .brand {
+  text-decoration: none;
   display: flex;
   align-items: center;
   gap: 12px;
@@ -372,6 +374,7 @@ footer {
 main:not(:has(.intro)) {
   padding-block: 2rem;
 }
+
 @media (prefers-reduced-motion: reduce) {
   * {
     transition: none !important;
