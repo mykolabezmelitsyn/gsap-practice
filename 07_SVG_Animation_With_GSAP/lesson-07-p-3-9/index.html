@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="Your creative coding workspace. Explore GSAP, scroll animation, SVG, Adobe Animate, and generative art."
+  />
+  <title>Creative Coding Club — Learning Library</title>
+  <link href="https://fonts.googleapis.com/css?family=Kanit:300,400,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/src/style.css" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<div class="shell">
+  <header>
+    <a href="/" class="brand">
+      <span class="brand-mark" aria-hidden="true">✳</span>
+      Creative Coding Club
+    </a>
+  </header>
+  <main>
+    <svg id="demo" viewBox="0 0 700 600" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <clipPath id="clip-0">
+          <path d="M 35.7728 494.8142 C 22.2605 491.9764 13.6071 478.7219 16.445 465.2096 C 20.4313 447.9723 28.5487 430.2242 38.3313 417.4741 C 48.1404 404.6897 62.204 392.7097 75.828 384.5879 C 102.7497 368.5389 138.8909 360.0924 170.5157 360.3901 C 202.2551 360.689 237.5852 370.0183 262.1063 386.6785 C 274.6384 395.1931 287.3666 408.0673 295.1941 421.2987 C 299.1075 427.914 302.8903 436.5649 305.1224 444.2984 C 307.3266 451.935 308.1708 464.0607 308.1708 464.0607 C 308.5056 465.5617 308.1708 464.0607 308.1708 464.0607 C 311.9997 477.3263 304.3497 491.1841 291.0841 495.013 C 277.8185 498.8419 263.9607 491.1919 260.1318 477.9263 C 260.1318 477.9263 259.797 476.4253 260.1318 477.9263 C 260.1318 477.9263 258.4363 462.8511 257.0834 458.164 C 255.7586 453.5739 254.5252 450.754 252.1604 446.7565 C 247.4312 438.7624 242.554 433.8428 234.0072 428.0359 C 216.3705 416.0532 195.6489 410.629 170.045 410.3879 C 144.3265 410.1458 121.833 415.373 101.4308 427.5355 C 91.3929 433.5195 84.6223 439.2798 78.0002 447.9106 C 71.3517 456.5758 67.4409 463.9179 65.3774 475.4864 C 62.5396 488.9987 49.2851 497.6521 35.7728 494.8142 Z" style="fill: rgb(68, 255, 51); fill-opacity: 0.73;"></path>
+        </clipPath>
+        <clipPath id="clip-1">
+          <path d="M 338.4802 499.9987 C 324.6738 499.865 313.5898 488.5642 313.7236 474.7577 L 316.4847 189.8624 C 316.8281 171.6558 321.0327 152.6574 328.0465 138.9114 C 335.198 124.8955 347.5083 111.2302 359.8471 102.4595 C 383.8807 85.3761 419.5371 76.7002 453.0678 76.7002 C 470.4736 76.7002 488.9796 79.8687 503.7216 85.2223 C 518.6803 90.6547 534.2158 100.094 545.3262 110.547 C 556.4602 121.0222 566.8533 136.078 572.8719 150.8036 C 578.7979 165.3025 582.2015 183.6863 582.4307 201.3657 L 586.0883 474.6654 C 586.273 488.4712 575.2309 499.8129 561.425 499.9977 C 547.6192 500.1824 536.2775 489.1403 536.0927 475.3345 L 532.4351 202.0348 C 532.6643 189.1207 530.6705 179.7078 526.5886 169.7205 C 522.5992 159.9598 518.3735 153.8397 511.0646 146.9633 C 503.7321 140.0646 497.0005 135.9765 486.6544 132.2193 C 476.0918 128.3834 466.2554 126.7002 453.0678 126.7002 C 425.4117 126.7002 405.2766 131.512 388.8153 143.213 C 380.9067 148.8345 376.7938 153.3855 372.5839 161.6363 C 368.2363 170.157 366.1413 177.4756 366.4847 189.8624 L 363.7212 475.2421 C 363.5875 489.0486 352.2867 500.1325 338.4802 499.9987 Z" style="fill: rgb(95, 255, 51);"></path>
+        </clipPath>
+      </defs>
+      <g id="holes">
+        <ellipse id="hole1" style="" cx="53.5819" cy="492.3422" rx="45.7038" ry="14.6597"></ellipse>
+        <ellipse id="hole2" style="" cx="299.4215" cy="491.3403" rx="45.7038" ry="14.6597"></ellipse>
+        <ellipse id="hole3" style="" cx="399.1425" cy="492.313" rx="45.7038" ry="14.6597"></ellipse>
+        <ellipse id="hole4" style="" cx="619.6397" cy="492.5359" rx="45.7038" ry="14.6597"></ellipse>
+      </g>
+      <g id="short" style="clip-path: url(#clip-0);" transform="matrix(1, 0, 0, 1, 14, 0)">
+        <title>short</title>
+        <path style="stroke-dashoffset: -50px; stroke: rgb(255, 51, 153); stroke-width: 25px; stroke-linecap: round; fill: none;" d="M 36.2066 500 C 39.2066 354 288.2066 317 286.2066 500"></path>
+      </g>
+      <path style="stroke-dashoffset: -50px; stroke-linecap: round; fill: none; stroke-width: 50px; stroke-opacity: 0.71;" d="M 80.7671 399.3545 C 104.9663 284.1314 320.4723 287.8052 324.0072 400"></path>
+      <g id="tall" style="clip-path: url(#clip-1);" transform="matrix(1, 0, 0, 1, 60, 0)">
+        <title>tall</title>
+        <path d="M 336.8621 500 L 337.6533 210.7885 C 337.6533 149.6017 387.255 100 448.4418 100 C 509.6286 100 559.2302 149.6017 559.2302 210.7885 L 559.2302 500" style="stroke: rgb(255, 51, 153); stroke-width: 26px; stroke-linecap: round; fill: none;"></path>
+      </g>
+    </svg>
+  </main>
+</div>
+<script type="module" src="scripts.js"></script>
+</body>
+</html>

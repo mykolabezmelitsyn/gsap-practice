@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="Your creative coding workspace. Explore GSAP, scroll animation, SVG, Adobe Animate, and generative art."
+  />
+  <title>Creative Coding Club — Learning Library</title>
+  <link href="https://fonts.googleapis.com/css?family=Kanit:300,400,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/src/style.css" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<div class="shell">
+  <header>
+    <a href="/" class="brand">
+      <span class="brand-mark" aria-hidden="true">✳</span>
+      Creative Coding Club
+    </a>
+  </header>
+  <main>
+    <div class="demoWrapper">
+      <h2>MotionPath Infinite Followers</h2>
+      <svg viewBox="0 100 500 300" xmlns="http://www.w3.org/2000/svg" xmlns:bx="https://boxy-svg.com">
+        <defs>
+          <radialGradient gradientUnits="userSpaceOnUse" cx="159.2899" cy="67.8919" r="18.3749" id="gradient-0" gradientTransform="matrix(1.1831563, 1.14812218, -1.26716109, 1.30582767, 55.75520113, -206.24885464)">
+            <stop offset="0" style="stop-color: rgb(243, 93, 93);"></stop>
+            <stop offset="1" style="stop-color: rgb(171, 40, 40);"></stop>
+          </radialGradient>
+          <radialGradient gradientUnits="userSpaceOnUse" cx="220.3364" cy="62.2808" r="18.3749" id="gradient-1" gradientTransform="matrix(1.09012126, 1.09352086, -1.14662975, 1.14306465, 52.31376798, -251.23837502)">
+            <stop offset="0" style="stop-color: rgb(205, 145, 242);"></stop>
+            <stop offset="1" style="stop-color: rgb(158, 47, 195);"></stop>
+          </radialGradient>
+          <radialGradient gradientUnits="userSpaceOnUse" cx="314.8126" cy="69.5914" r="18.3749" id="gradient-2" gradientTransform="matrix(1.19585671, 1.09677242, -1.29765382, 1.4148858, 28.7714691, -383.56197674)">
+            <stop offset="0" style="stop-color: rgb(134, 248, 128);"></stop>
+            <stop offset="1" style="stop-color: rgb(94, 183, 90);"></stop>
+          </radialGradient>
+          <radialGradient gradientUnits="userSpaceOnUse" cx="389.343" cy="81.2703" r="18.3749" id="gradient-3" gradientTransform="matrix(1.09339778, 1.02009152, -0.97825622, 1.04855586, 43.73941401, -409.54784977)">
+            <stop offset="0" style="stop-color: rgb(178, 247, 255);"></stop>
+            <stop offset="1" style="stop-color: rgb(58, 156, 166);"></stop>
+          </radialGradient>
+          <filter id="drop-shadow-filter-2" color-interpolation-filters="sRGB" x="-50%" y="-50%" width="200%" height="200%" bx:preset="drop-shadow 1 2 2 2 0.4 rgba(0,0,0,1)">
+            <feGaussianBlur in="SourceAlpha" stdDeviation="2"></feGaussianBlur>
+            <feOffset dx="2" dy="2"></feOffset>
+            <feComponentTransfer result="offsetblur">
+              <feFuncA id="spread-ctrl" type="linear" slope="0.8"></feFuncA>
+            </feComponentTransfer>
+            <feFlood flood-color="rgba(0,0,0,1)"></feFlood>
+            <feComposite in2="offsetblur" operator="in"></feComposite>
+            <feMerge>
+              <feMergeNode></feMergeNode>
+              <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+          </filter>
+          <linearGradient gradientUnits="userSpaceOnUse" x1="226.9601" y1="206.2308" x2="226.9601" y2="302.6589" id="gradient-4" gradientTransform="matrix(0.93081946, -0.36547936, 0.26818711, 0.7300394, -6.36124316, 135.9320854)">
+            <stop offset="0" style="stop-color: rgba(243, 243, 243, 1)"></stop>
+            <stop offset="1" style="stop-color: rgba(192, 192, 192, 1)"></stop>
+          </linearGradient>
+          <filter id="drop-shadow-filter-0" color-interpolation-filters="sRGB" x="-50%" y="-50%" width="200%" height="200%" bx:preset="drop-shadow 1 5 0 2 0.36 rgba(0,0,0,0.78)">
+            <feGaussianBlur in="SourceAlpha" stdDeviation="2"></feGaussianBlur>
+            <feOffset dx="5" dy="0"></feOffset>
+            <feComponentTransfer result="offsetblur">
+              <feFuncA id="feFuncA-1" type="linear" slope="0.72"></feFuncA>
+            </feComponentTransfer>
+            <feFlood flood-color="rgba(0,0,0,0.78)"></feFlood>
+            <feComposite in2="offsetblur" operator="in"></feComposite>
+            <feMerge>
+              <feMergeNode></feMergeNode>
+              <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+          </filter>
+          <filter id="drop-shadow-filter-1" color-interpolation-filters="sRGB" x="-50%" y="-50%" width="200%" height="200%" bx:preset="drop-shadow 1 -5 0 2 0.36 rgba(0,0,0,0.61)">
+            <feGaussianBlur in="SourceAlpha" stdDeviation="2"></feGaussianBlur>
+            <feOffset dx="-5" dy="0"></feOffset>
+            <feComponentTransfer result="offsetblur">
+              <feFuncA id="feFuncA-1" type="linear" slope="0.72"></feFuncA>
+            </feComponentTransfer>
+            <feFlood flood-color="rgba(0,0,0,0.61)"></feFlood>
+            <feComposite in2="offsetblur" operator="in"></feComposite>
+            <feMerge>
+              <feMergeNode></feMergeNode>
+              <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+          </filter>
+        </defs>
+        <path style="fill: none; stroke-width: 4px; stroke: rgb(220, 220, 220);" d="M 45.059 201.9555 C 45.059 201.9555 135.906 309.9383 245.4774 201.5695 C 355.0488 93.2007 445.4774 201.5695 445.4774 201.5695" class="path"></path>
+        <path style="fill: none; stroke-width: 4px; stroke: url(#gradient-4);" d="M 44.7888 203.7412 C 44.7888 203.7412 135.6358 311.724 245.2072 203.3552 C 354.7786 94.9864 445.2072 203.3552 445.2072 203.3552" class="pathShadow"></path>
+        <g transform="matrix(1, 0, 0, 1, 24.57774544, -4.09961891)" class="circles">
+          <title>group</title>
+
+          <ellipse style="stroke-width: 0px; fill: url(#gradient-0); filter: url(#drop-shadow-filter-2);" cx="166.4641" cy="74.4483" rx="18.3749" ry="18.3749"></ellipse>
+          <ellipse style="stroke-width: 0px; fill: url(#gradient-1); filter: url(#drop-shadow-filter-2);" cx="228.2173" cy="69.547" rx="18.3749" ry="18.3749"></ellipse>
+          <ellipse style="stroke-width: 0px; fill: url(#gradient-2); filter: url(#drop-shadow-filter-2);" cx="324.48" cy="69.4432" rx="18.3749" ry="18.3749"></ellipse>
+          <ellipse style="stroke-width: 0px; fill: url(#gradient-3); filter: url(#drop-shadow-filter-2);" cx="398.6265" cy="81.6251" rx="18.3749" ry="18.3749"></ellipse>
+        </g>
+        <g transform="matrix(1, 0, 0, 1, 4e-8, 2.24961448)" class="tunnels">
+          <title>tunnels</title>
+          <path d="M 47.82 150.6681 L 101.7282 200.3381 C 93.9558 187.5973 46.6723 240.3772 53.9083 252.2385 L 0 202.5685 L 47.82 150.6681 Z" style="filter: url(#drop-shadow-filter-0); fill: rgb(255, 255, 255); transform-origin: -64.2032px 247.169px;"></path>
+          <path d="M 418.3812 170.6905 L 492.2043 170.6905 L 492.2043 238.6099 L 418.3812 238.6099 C 426.7681 246.3143 430.1181 181.4724 418.3812 170.6905 Z" style="filter: url(#drop-shadow-filter-1); fill: rgb(255, 255, 255); transform-origin: 455.293px 204.967px;" transform="matrix(0.73313077, 0.6800877, -0.6800877, 0.73313077, 0.00001128, -0.00000665)"></path>
+        </g>
+      </svg>
+    </div>
+
+  </main>
+</div>
+<script type="module" src="scripts.js"></script>
+</body>
+</html>

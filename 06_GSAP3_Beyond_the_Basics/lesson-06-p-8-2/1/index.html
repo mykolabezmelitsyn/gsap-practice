@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta
+    name="description"
+    content="Your creative coding workspace. Explore GSAP, scroll animation, SVG, Adobe Animate, and generative art."
+  />
+  <title>Creative Coding Club — Learning Library</title>
+  <link rel="stylesheet" href="/src/style.css"/>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+<div class="shell">
+  <header>
+    <a href="/" class="brand">
+      <span class="brand-mark" aria-hidden="true">✳</span>
+      Creative Coding Club
+    </a>
+  </header>
+  <main>
+    <div class="demo fadeInAll">
+      <h2>Fade in all</h2>
+      <p>Every box starts out with opacity:0 and fades in one after the other using a basic stagger.</p>
+      <pre class="code-block prettyprint lang-js">
+const fadeInAll = gsap.from(".fadeInAll .box", { opacity: 0, stagger: 0.5 });</pre>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <button class="restart">restart</button>
+    </div>
+
+    <div class="demo fadeInOutAll">
+      <h2>Fade in and out all</h2>
+      <p>Every box fades in and then fades out one after the other.</p>
+      <p>This technique uses a single fromTo() tween that has its repeat set in the stagger object.</p>
+      <pre class="code-block prettyprint lang-js">
+const tween = gsap.fromTo(".box", {opacity:0},
+	{opacity: 1,
+		stagger: {
+			each: 1,
+			repeat: 1,
+			yoyo: true
+		}
+	}
+);</pre>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <button class="restart">restart</button>
+    </div>
+
+    <div class="demo fadeInOutAllTimeline">
+      <h2>Fade in out all (timeline)</h2>
+      <p>Every box fades in and then fades out one after the other.</p>
+      <p>This technique uses a timeline with 2 overlapping stagger tweens.</p>
+      <pre class="code-block prettyprint lang-js">
+const tl = gsap.timeline()
+.from(".box", {opacity:0, stagger:1})
+.to(".box", {opacity:0, stagger:1}, 0.5)</pre>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <button class="restart">restart</button>
+    </div>
+
+    <div class="demo fadeInOutAllLoop">
+      <h2>Fade in and out all (loop)</h2>
+      <p>Every box fades in and then fades out one after the other.</p>
+      <p>This technique uses a loop to add 2 tweens to a timeline for each box.</p>
+      <pre class="code-block prettyprint lang-js">const tl = gsap.timeline()
+const boxes = gsap.utils.toArray(".box")
+boxes.forEach((box, index) => {
+	tl.from(box, {opacity:0})
+	  .to(box, {opacity:0})
+})</pre>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <button class="restart">restart</button>
+    </div>
+
+    <div class="demo fadeInOutNotLastLoop">
+      <h2>Fade in and out all but not last (loop w/ condition)</h2>
+      <p>Every box fades in and then fades out but the last box does not fade out.</p>
+      <p>This technique uses a loop with a condition that checks for the last box. The last box will not have a fade out
+        animation applied.</p>
+      <pre class="code-block prettyprint lang-js">const tl = gsap.timeline()
+const boxes = gsap.utils.toArray(".box")
+boxes.forEach((box, index) => {
+	tl.from(box, {opacity:0})
+	//don't fade out last box
+	if(index < boxes.length-1) {
+	tl.to(box, {opacity:0})
+	}
+})</pre>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <button class="restart">restart</button>
+    </div>
+
+    <div class="demo fadeInOutNotLastTimeline">
+      <h2>Fade in and out all not last (timeline w/ selector)</h2>
+      <p>Every box fades in and then fades out but the last box does not fade out.</p>
+      <p>This technique builds a timeline with 2 stagger tweens. The fade out stagger uses a fancy css selector to not
+        select the last box.</p>
+      <pre class="code-block prettyprint lang-js">
+const tl = gsap.timeline()
+.from(".box", {opacity:0, stagger:1})
+.to(".box:not(:last-of-type)", {opacity:0, stagger:1}, 0.5)</pre>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <button class="restart">restart</button>
+    </div>
+
+    <div class="demo noFadeInFirstNoFadeOutLastLoop">
+      <h2>Don't fade in first and don't fade out last (loop w/ conditions)</h2>
+      <p>The first box starts fully visible and fades out. The last box does not fade out.</p>
+      <p>This technique uses a loop with conditions that check for the first and last box. The first box skips the fade
+        in and the last box skips the fade out animation.</p>
+      <pre class="code-block prettyprint lang-js">const tl = gsap.timeline()
+const boxes = gsap.utils.toArray(".box")
+boxes.forEach((box, index) => {
+	//don't fade in first
+	if(index != 0) {
+		tl.from(box, {opacity:0})
+	}
+	//don't fade out last box
+	if(index < loopBoxes.length-1){
+		tl.to(box, {opacity:0})
+	}
+})</pre>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <button class="restart">restart</button>
+    </div>
+
+    <div class="demo noFadeInFirstNoFadeOutLastSrub">
+      <h2>Don't fade in first and don't fade out last (scrub timeline tweenFromTo())</h2>
+      <p>A timeline is built that fades in and out every box</p>
+      <p>A separate tween is created using tweenFromTo() that scrubs the timeline's playhead from a time of 0.5 to 0.5
+        seconds from the end.</p>
+      <p>0.5 seconds is the time the first box is fully visible</p>
+      <p>0.5 seconds from the end (tl.duration() - 0.5) is the time that the last box is fully faded in.</p>
+      <pre class="code-block prettyprint lang-js">
+const tl = gsap.timeline()
+.from(".box", {opacity:0, stagger:1})
+.to(".box", {opacity:0, stagger:1}, 0.5)
+
+const scrub = tl.tweenFromTo(0.5, tl.duration() - 0.5)</pre>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <button class="restart">restart</button>
+    </div>
+
+
+    <h2>Test this Code On Your Own</h2>
+    Open <a href="https://codepen.io/snorkltv/pen/RwydJBa?editors=0010" target="_blank">this codepen</a> and paste in
+    any of the code samples above.
+
+
+  </main>
+</div>
+<script type="module" src="scripts.js"></script>
+</body>
+</html>

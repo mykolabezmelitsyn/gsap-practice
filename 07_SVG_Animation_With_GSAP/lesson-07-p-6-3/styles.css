@@ -1,0 +1,12 @@
+body {
+  overflow:hidden;
+}
+
+.demo {
+  opacity:0;
+  width:80%;
+}
+
+.demo svg {
+  overflow:visible;
+}
