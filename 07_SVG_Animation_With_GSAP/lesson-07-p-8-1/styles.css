@@ -1,0 +1,38 @@
+body {
+  font-family:Arial, sans-serif;
+}
+
+line {
+  stroke-width:1px;
+  stroke:#ccc;
+}
+
+svg.demo {
+  width:500px;
+  height:400px;
+}
+
+
+.pink {
+  fill:rgb(252, 183, 211);
+}
+
+.blue {
+  fill:rgb(183, 241, 252);
+}
+
+polyline {
+  stroke:red;
+  stroke-width:4px;
+  fill:none;
+}
+
+button {
+  margin:20px;
+  padding:15px;
+}
+
+circle {
+  fill:red;
+  opacity:0;
+}

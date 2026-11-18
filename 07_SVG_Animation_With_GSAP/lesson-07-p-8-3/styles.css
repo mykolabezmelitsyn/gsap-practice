@@ -1,0 +1,22 @@
+svg {
+  position:relative;
+  overflow:hidden;
+  border:1px solid grey;
+  background:white;
+}
+
+body {
+  background:#1d1d1d;
+  text-align:center;
+  color:#ccc;
+  font-family:sans-serif;
+}
+
+button {
+  padding:10px;
+  font-size:18px;
+}
+
+g {
+  /*filter: drop-shadow(6px 6px 8px darkblue);*/
+}
