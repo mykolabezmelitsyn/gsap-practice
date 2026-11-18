@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="Your creative coding workspace. Explore GSAP, scroll animation, SVG, Adobe Animate, and generative art."
+  />
+  <title>Creative Coding Club — Learning Library</title>
+  <link href="https://fonts.googleapis.com/css?family=Kanit:300,400,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/src/style.css" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<div class="shell">
+  <header>
+    <a href="/" class="brand">
+      <span class="brand-mark" aria-hidden="true">✳</span>
+      Creative Coding Club
+    </a>
+  </header>
+  <main>
+    <div class="demo">
+      <svg id="demo" viewBox="0 0 500 300" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <radialGradient gradientUnits="userSpaceOnUse" cx="250" cy="195" r="250" id="gradient-0">
+            <stop offset="0" style="stop-color: rgb(25, 255, 0);"></stop>
+            <stop offset="1" style="stop-color: rgba(0, 255, 33, 0);"></stop>
+          </radialGradient>
+        </defs>
+        <g id="paths">
+          <path style="stroke:  url(#gradient-0); fill: none;" d="M 1 299 C 1 299 70 172 158 173 C 246 174 284 210 334 192 C 384 174 436 111 500 129"></path>
+          <path style="stroke:  url(#gradient-0); fill: none;" d="M 0 300 C 0 300 69 155 157 156 C 245 157 283 193 333 175 C 383 157 436 111 500 129"></path>
+          <path style="stroke:  url(#gradient-0); fill: none;" d="M 0 300 C 0 300 76 136 164 137 C 252 138 290 174 340 156 C 390 138 436 111 500 129"></path>
+          <path style="stroke: url(#gradient-0); fill: none;" d="M 0 300 C 0 300 76 113 164 114 C 252 115 289 161 339 143 C 389 125 436 111 500 129"></path>
+          <path style="fill: none; stroke: url(#gradient-0);" d="M 0 300 C 0 300 64 90 152 91 C 240 92 291 149 341 131 C 391 113 436 111 500 129"></path>
+        </g>
+      </svg>
+    </div>
+  </main>
+</div>
+<script type="module" src="scripts.js"></script>
+</body>
+</html>

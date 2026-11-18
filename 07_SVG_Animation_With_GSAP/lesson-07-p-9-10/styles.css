@@ -1,0 +1,12 @@
+#demo {
+  opacity:0;
+}
+
+.demo {
+  font-size: 0;
+  background-color: #fff;
+}
+
+body {
+  margin:20px;
+}
