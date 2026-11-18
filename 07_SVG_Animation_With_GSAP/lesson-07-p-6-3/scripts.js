@@ -27,7 +27,7 @@ function createCircles(numCircles) {
         end:start + 1
       }, ease:"none", duration:8, repeat:20
     }, 0)
-    tl.to(newCircle, {scale:1, duration:1, repeat:80, repeatDelay:1, yoyo:true}, i*0.5)
+    tl.to(newCircle, {scale:1.3, duration:1, repeat:80, repeatDelay:1, yoyo:true}, i*0.5)
   }
 }
 

@@ -1,0 +1,28 @@
+#bat {
+  display:none;
+}
+
+#lines {
+  display:none;
+}
+
+.demo2 svg {
+  overflow:visible;
+}
+
+#arrow {
+  display:none;
+}
+
+
+.demo5 #morph {
+  opacity: 0;
+  width: 100%;
+  height:100%;
+}
+
+.lemon {
+  display: none;
+}
+
+
