@@ -1,0 +1,23 @@
+body {
+  background:#1d1d1d;
+  font-family:sans-serif;
+  color:#ccc;
+}
+
+.demo {
+  opacity:0;
+  overflow:visible;
+  width:80%;
+}
+
+.demo ellipse {
+  cursor:pointer;
+  fill:#eee;
+  opacity:0.8;
+}
+
+.demo line {
+  stroke: #f39;
+  stroke-linecap: round;
+  stroke-width: 24px;
+}

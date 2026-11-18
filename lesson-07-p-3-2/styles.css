@@ -1,0 +1,29 @@
+body {
+  margin: 0;
+  background: #1d1d1d;
+}
+
+line, rect {
+  stroke: #f39;
+  stroke-width: 8px;
+}
+
+line {
+  /* safari needs 300 300 for stroke-dasharray instead of single 300 */
+  stroke-dasharray: 300 300;
+  stroke-dashoffset: 300;
+  stroke: dodgerblue;
+}
+
+rect {
+  fill: none;
+  stroke-dasharray: 800;
+  stroke-dashoffset: 800;
+  stroke-linecap: square;
+}
+
+#curve {
+  stroke: #f39;
+  stroke-width: 8px;
+  fill:none;
+}

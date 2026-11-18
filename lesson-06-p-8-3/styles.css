@@ -1,0 +1,38 @@
+body {
+  margin: 0;
+  font-size: 1em;
+  height: 100%;
+}
+
+* {
+  position: relative;
+}
+
+h1 {
+  margin: 0;
+}
+
+hr {
+  margin-block: 2rem;
+}
+
+.wrapper-1 h1 {
+  letter-spacing: 0.8vw;
+  font-size: 5.5vw;
+  will-change: transform;
+  color: #831f6e;
+}
+
+.wrapper-2 h1 {
+  letter-spacing: 0.6vw;
+  font-size: clamp(38px, 5vw, 120px);
+  will-change: transform;
+  color: #831f6e;
+  line-height: 1.2cap;
+}
+
+.wrapper-2 {
+  place-self: center; /* new */
+  font-family: sans-serif;
+  flex-direction: column;
+}

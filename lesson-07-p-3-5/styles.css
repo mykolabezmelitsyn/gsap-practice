@@ -1,0 +1,15 @@
+.demo  {
+  opacity:0;
+  width:90%;
+}
+
+body {
+  text-align:center;
+  overflow:hidden;
+}
+
+.demo path {
+  stroke:orange;
+  stroke-weight:2px;
+  fill:none;
+}

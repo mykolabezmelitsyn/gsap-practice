@@ -1,0 +1,14 @@
+body, html {
+  width:100%;
+}
+
+body {
+  margin:0;
+}
+
+
+#plane {
+  opacity:0;
+  width:90%;
+}
+

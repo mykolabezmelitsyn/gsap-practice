@@ -1,0 +1,27 @@
+html, body {
+  width: 100%;
+  height: 100%;
+  font-family: Kanit;
+  color: white;
+  margin: 0;
+  font-size: 19px;
+}
+
+body {
+  background: #1d1d1d;
+  overflow: hidden;
+}
+
+h1 {
+  font-size: 6vw;
+  font-weight: 600;
+  margin: 0;
+  line-height: 4vw;
+}
+
+h2 {
+  font-size: 3vw;
+  font-weight: 600;
+  margin: 0;
+  letter-spacing: 10px;
+}

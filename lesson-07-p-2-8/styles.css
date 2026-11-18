@@ -1,0 +1,11 @@
+body {
+  background:#1d1d1d;
+  text-align:center /* it works, don't judge */
+}
+
+svg.demo {
+  background:#ededed;
+  border:1px solid #ccc;
+  min-width:300px;
+  width:80%;
+}

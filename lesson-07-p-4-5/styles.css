@@ -1,0 +1,13 @@
+body, html {
+  height:100%;
+}
+
+#demo1 {
+  opacity:0;
+  overflow:hidden;
+}
+
+svg {
+  overflow:visible;
+  background:black;
+}

@@ -1,0 +1,15 @@
+body {
+  margin:0;
+  background:#1d1d1d;
+  overflow:hidden;
+}
+
+rect {
+  stroke: #444;
+  stroke-width: 8px;
+  fill:none;
+}
+
+#draw {
+  stroke:#f39;
+}

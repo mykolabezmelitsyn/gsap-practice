@@ -1,0 +1,29 @@
+/*body {*/
+/*  font-family:sans-serif;*/
+/*  font-size:1.3em;*/
+/*  margin-bottom:15vh;*/
+/*}*/
+
+p {
+  color: #333;
+}
+
+.box {
+  width: 40px;
+  height: 40px;
+  background: dodgerblue;
+  display: inline-block;
+  border-radius: 4px;
+}
+
+.restart {
+  margin-top: 20px;
+  display: block;
+}
+
+.demo {
+  padding-bottom: 20px;
+  border-bottom: 1px dashed #ccc;
+  opacity: 0;
+}
+
